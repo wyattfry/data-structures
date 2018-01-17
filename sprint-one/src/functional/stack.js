@@ -10,6 +10,9 @@ var Stack = function() {
   };
 
   someInstance.pop = function() {
+    var temp = storage[Object.keys(storage).length - 1];
+    delete storage[Object.keys(storage).length - 1];
+    return temp;
   };
 
   someInstance.size = function() {
